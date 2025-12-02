@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Interactive pricing component</title>
+        <link rel="stylesheet" href="dist/styles.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div class="box-bg"></div>
+            <div class="box">
+                <h1>Simple, traffic-based pricing</h1>
+                <p>Sign-up for our 30-day trial. No credit card required.</p>
+            </div>
+
+            <section class="card">
+                <div class="title">
+                    <h2><span class="views">100k</span>Pageviews</h2>
+                    <p>
+                        <span class="bold"
+                            >$<span class="price">16.00</span></span
+                        >&MediumSpace;/&MediumSpace;month
+                    </p>
+                </div>
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    id="price-bar"
+                    class="slider"
+                />
+                <fieldset>
+                    <p>Monthly Billing</p>
+                    <div>
+                        <input
+                            type="radio"
+                            id="remove-discount"
+                            name="bill"
+                            checked
+                        />
+                        <input id="discount" type="radio" name="bill" />
+                    </div>
+                    <p>
+                        Yearly Billing
+                        <span class="discount-d">25% discount</span>
+                        <span class="discount">-25%</span>
+                    </p>
+                </fieldset>
+                <section class="button">
+                    <div class="perks">
+                        <p>
+                            <img
+                                src="images/icon-check.svg"
+                                alt="checkmark-icon"
+                            />
+                            Unlimited websites
+                        </p>
+                        <p>
+                            <img
+                                src="images/icon-check.svg"
+                                alt="checkmark-icon"
+                            />
+                            100% data ownership
+                        </p>
+                        <p>
+                            <img
+                                src="images/icon-check.svg"
+                                alt="checkmark-icon"
+                            />
+                            Email reports
+                        </p>
+                    </div>
+                    <button type="submit">Start my trial</button>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >
+                Coded by
+                <a
+                    href="
+https://savion-dev.vercel.app"
+                    >Savion</a
+                >
+            </div>
+        </footer>
+    </body>
+</html>
