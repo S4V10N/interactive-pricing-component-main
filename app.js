@@ -1,12 +1,30 @@
-console.log("js is working");
 const priceRange = document.querySelector("#price-bar");
 const applyDiscount = document.querySelector("#discount");
 const removeDiscount = document.querySelector("#remove-discount");
 const pages = document.querySelector(".views");
 const price = document.querySelector(".price");
 
+let discountApplied = false;
+
+applyDiscount.addEventListener("click", () => {
+    if (discountApplied) return;
+
+    let base = parseFloat(price.textContent);
+    let discounted = base - (base * 25) / 100;
+    price.textContent = discounted.toFixed(2);
+
+    discountApplied = true;
+});
+
+removeDiscount.addEventListener("click", () => {
+    discountApplied = false;
+
+    priceRange.dispatchEvent(new Event("input"));
+});
+
 priceRange.addEventListener("input", () => {
-    removeDiscount.checked = "true";
+    removeDiscount.checked = true;
+
     if (priceRange.value < 20) {
         pages.textContent = "10K";
         price.textContent = "8.00";
@@ -23,9 +41,4 @@ priceRange.addEventListener("input", () => {
         pages.textContent = "1M";
         price.textContent = "36.00";
     }
-});
-
-applyDiscount.addEventListener("click", () => {
-    let num = price.textContent - (price.textContent * 25) / 100;
-    price.textContent = num.toFixed(2);
 });
