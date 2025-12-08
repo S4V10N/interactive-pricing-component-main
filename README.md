@@ -45,7 +45,7 @@ Users should be able to:
 
 i expanded my knowledge of event listeners in Js as well as better coding practices without breaking my back or reinventing the wheel.
 
-To see how you can add code snippets, see below:
+See code snippets below:
 
 ```sass
 fieldset
